@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pipelinepy"
+version = "1.0.3"
+description = "An Adobe IMS authorization code flow used with the Kafka client for Python (kafka-python-ng)."
+authors = ["Petrut Petrache <cpetrache@adobe.com>"]
+readme = "README.md"
+repository = "https://github.com/cristianpetrache/test-me"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.31.0"
+kafka-python-ng = "^2.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
