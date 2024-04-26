@@ -1,2 +1,2 @@
-pipelinepy~=1.0.3
+pipelinepy~=1.0.4
 kafka-python-ng~=2.2.2
