@@ -1,11 +1,11 @@
 # pipelinepy
 
-This is a Python client callback for the Adobe Pipeline Kafka. It is designed to provide a 
-simple and straightforward interface for authenticating IMS users into Kafka.
+This is an OAuth Python client callback for the kafka-python-ng client implementation. It is designed to provide a 
+simple and straightforward interface for authenticating Adobe IMS (Identity Management System) users into Kafka.
 
 ## Installation
 
-To install the pipelinepy, you can use pip:
+Install pipelinepy using pip:
 
 ```bash
 pip install pipelinepy
@@ -13,11 +13,12 @@ pip install pipelinepy
 
 ## Usage
 
-To use the pipelinepy, you need to import the specified requirements. 
-You can then create a Kafka producer and consumer, and use them to send and receive messages to/ from a Kafka topic.
+Pipelinepy is designed to be used with the kafka-python-ng client implementation. 
+To use it, you need to create an instance of the `ImsTokenProvider` class and pass it to 
+the `sasl_oauth_token_provider` parameter of the Kafka producer and consumer.
 
 ```bash
-pip install -r requirements.txt
+pip install kafka-python-ng pipelinepy
 ```
 
 ```python
@@ -108,7 +109,7 @@ if __name__ == "__main__":
 
 The following environment variables need to be set:
 
-- `IMS_URL`: The URL of the IMS service.
+- `IMS_URL`: The base URL of the IMS service (does not include the '/ims/token/v1' part).
 - `IMS_CLIENT_ID`: The client ID for the IMS service.
 - `IMS_CLIENT_SECRET`: The client secret for the IMS service.
 - `IMS_CLIENT_CODE`: The client code for the IMS service.
